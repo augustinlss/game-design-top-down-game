@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float moveSpeed = 5f;
     public float sprintSpeed = 8f;
     public float stamina = 100f;
     public float maxStamina = 100f;
     public float staminaRegenRate = 5f;
     public float sprintStaminaCost = 10f;
-    
 
     public float jumpForce = 7f;
     public bool isGrounded = true;
@@ -27,9 +25,12 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer lowerTreeSprite;
     private SpriteRenderer upperTreeSprite;
 
+    private Animator animator; // Animator reference
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
         movement = movement.normalized;
 
+        // Sprinting logic
         if (Input.GetKey(KeyCode.LeftShift) && stamina > 0f)
         {
             isSprinting = true;
@@ -49,16 +51,30 @@ public class PlayerController : MonoBehaviour
         {
             isSprinting = false;
             currentSpeed = moveSpeed;
-            
+
             if (stamina < maxStamina)
                 stamina += staminaRegenRate * Time.deltaTime;
         }
 
         stamina = Mathf.Clamp(stamina, 0, maxStamina);
+
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Jump();
         }
+
+        if (movement.x > 0) // Moving right
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (movement.x < 0) // Moving left
+        {
+            transform.localScale = new Vector3(1, 1, 1); 
+        }
+
+        bool isMoving = movement.magnitude > 0; 
+        animator.SetBool("isRunning", isMoving && isSprinting); 
+        animator.SetBool("isWalking", isMoving && !isSprinting); 
     }
 
     void FixedUpdate()
@@ -68,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        //trigger animation 
+        //trigger animation for jumping
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -79,17 +95,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Tree"))
         {
-            // Find the child objects that contain the lower and upper sprite renderers
             lowerTreeSprite = collision.gameObject.transform.Find("Lower").GetComponent<SpriteRenderer>();
             upperTreeSprite = collision.gameObject.transform.Find("Upper").GetComponent<SpriteRenderer>();
 
             if (lowerTreeSprite != null && upperTreeSprite != null)
             {
-                // Change the opacity of both lower and upper tree sprites
                 ChangeTreeOpacity(lowerTreeSprite, treeOpacityOnCollision);
                 ChangeTreeOpacity(upperTreeSprite, treeOpacityOnCollision);
             }
@@ -100,7 +114,6 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Tree") && lowerTreeSprite != null && upperTreeSprite != null)
         {
-            // Restore full opacity for both the lower and upper tree sprites
             ChangeTreeOpacity(lowerTreeSprite, 1f);
             ChangeTreeOpacity(upperTreeSprite, 1f);
         }
@@ -113,4 +126,4 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.color = spriteColor;
     }
 }
-
+ 
