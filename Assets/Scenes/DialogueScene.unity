@@ -2299,7 +2299,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -172919522, guid: 299caf9e1fdaf4cc19142db3fe9ee3a7, type: 3}
-  m_Color: {r: 0.7231959, g: 0.79622644, b: 0.5813955, a: 1}
+  m_Color: {r: 0.8981713, g: 0.90943396, b: 0.8768316, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2319,7 +2319,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.665, y: 0.167, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
