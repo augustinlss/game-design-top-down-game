@@ -4,6 +4,7 @@ public class SwordAttackController : MonoBehaviour
 {
     public Animator swordAnimator;
 
+
     private bool isAttacking = false;
 
     void Update()
@@ -11,12 +12,15 @@ public class SwordAttackController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             PerformSwordAttack();
+            
         }
     }
 
     void PerformSwordAttack()
     {
+
         isAttacking = true;
+        
 
         swordAnimator.SetBool("isAttacking", true);
 
@@ -27,6 +31,7 @@ public class SwordAttackController : MonoBehaviour
     void ResetAttack()
     {
         isAttacking = false;
+   
         swordAnimator.SetBool("isAttacking", false);
     }
 }
