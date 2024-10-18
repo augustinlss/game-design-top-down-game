@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "game-design-roman-intro.sln"
+    "dotnet.defaultSolution": "game-design-top-down-game.sln"
 }

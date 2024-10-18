@@ -126,4 +126,3 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.color = spriteColor;
     }
 }
- 
