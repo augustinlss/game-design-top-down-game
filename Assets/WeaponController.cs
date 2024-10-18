@@ -8,6 +8,8 @@ public class WeaponController : MonoBehaviour
     public float offset = 0f; // Angle offset if needed for adjusting weapon orientation
     public Animator swordAnimator;
     private bool isAttacking = false;
+    public AudienceController aud;
+
     void Update()
     {
         if (!isAttacking) {
@@ -71,6 +73,8 @@ public class WeaponController : MonoBehaviour
     {
         isAttacking = true;
 
+        aud.TriggerJump();
+
         // Trigger the sword attack animation in the Animator
         swordAnimator.SetBool("isAttacking", true);
         // Wait for the duration of the sword animation
@@ -79,7 +83,9 @@ public class WeaponController : MonoBehaviour
 
         swordAnimator.SetBool("isAttacking", false);
 
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.4f);
         isAttacking = false;
+
+        aud.StopJump();
     }
 }

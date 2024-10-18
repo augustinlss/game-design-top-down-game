@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         }
 
         bool isMoving = movement.magnitude > 0; 
-        animator.SetBool("isRunning", isMoving && isSprinting); 
+        animator.SetBool("isSprinting", isMoving && isSprinting); 
         animator.SetBool("isWalking", isMoving && !isSprinting); 
     }
 
