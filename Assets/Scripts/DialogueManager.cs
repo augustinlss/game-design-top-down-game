@@ -129,6 +129,6 @@ public class DialogueManager : MonoBehaviour
         monologueUI.SetActive(false);  // Hide the monologue UI
         isDialogueActive = false;  // Reset dialogue state to allow new dialogues
         
-        FindObjectOfType<Player>().SetMovement(true); // Enable player movement
+        // FindObjectOfType<Player>().SetMovement(true); // Enable player movement
     }
 }
