@@ -41,8 +41,6 @@ public class DialogueManager : MonoBehaviour
 
         isDialogueActive = true;
 
-        // Disable player movement
-        FindObjectOfType<Player>().SetMovement(false);  
 
         // Check if it's a monologue or an NPC dialogue
         if (isMonologue)

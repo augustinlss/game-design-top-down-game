@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cainos.PixelArtTopDown_Basic
-{
+
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
 
         private Animator animator;
+        private bool canMove = true;  // Flag to control movement
 
         private void Start()
         {
@@ -46,5 +46,16 @@ namespace Cainos.PixelArtTopDown_Basic
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
         }
-    }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("NPC"))
+            {
+                // Logic for what happens when colliding with an NPC
+                Debug.Log("Collided with NPC!");
+                // You can also disable movement or trigger a dialogue here
+                // SetMovement(false);
+            }
+        }
 }
+

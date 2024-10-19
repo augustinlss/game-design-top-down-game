@@ -28,6 +28,8 @@ public class NPCDialogueTrigger : MonoBehaviour
 
     void Update()
     {
+       
+
         // Check if player is in range and E key is pressed
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {

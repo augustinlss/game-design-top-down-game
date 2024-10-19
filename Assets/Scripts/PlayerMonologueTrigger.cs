@@ -15,6 +15,7 @@ public class PlayerMonologueTrigger : MonoBehaviour
     public void TriggerPlayerMonologue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(playerMonologue);
+        Debug.Log("starting dialog");
     }
 }
 
