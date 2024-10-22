@@ -1759,8 +1759,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: -298.29}
-  m_SizeDelta: {x: 1339.401, y: 800}
+  m_AnchoredPosition: {x: -164.45007, y: -76}
+  m_SizeDelta: {x: 1851.8, y: 436.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409683848
 MonoBehaviour:
@@ -1809,8 +1809,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6701,10 +6701,22 @@ MonoBehaviour:
     dialogueLines:
     - speakerName: Gaius Cassius Severus
       speakerImage: {fileID: 21300000, guid: 2a9f7ca749dae6f48a540384accc0e71, type: 3}
-      sentence: Hi
+      sentence: Hey, prisoner! What are you trying to pull?
     - speakerName: Marcus
       speakerImage: {fileID: 21300000, guid: 0facd06b7b12c3e4393bb7f1179f4846, type: 3}
-      sentence: Hi
+      sentence: Wait, I think there's been a misunderstanding...
+    - speakerName: Gaius Cassius Severus
+      speakerImage: {fileID: 21300000, guid: 2a9f7ca749dae6f48a540384accc0e71, type: 3}
+      sentence: "I don\u2019t fall for tricks. What are you up to?"
+    - speakerName: Marcus
+      speakerImage: {fileID: 21300000, guid: 0facd06b7b12c3e4393bb7f1179f4846, type: 3}
+      sentence: "I'm serious, I don\u2019t even know where I am!"
+    - speakerName: Gaius Cassius Severus
+      speakerImage: {fileID: 21300000, guid: 2a9f7ca749dae6f48a540384accc0e71, type: 3}
+      sentence: 'Enough! No more excuses. '
+    - speakerName: Gaius Cassius Severus
+      speakerImage: {fileID: 21300000, guid: 2a9f7ca749dae6f48a540384accc0e71, type: 3}
+      sentence: "Get ready. It\u2019s time for your fight."
 --- !u!212 &568907393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7068,10 +7080,11 @@ MonoBehaviour:
     dialogueLines:
     - speakerName: Marcus
       speakerImage: {fileID: 21300000, guid: 0facd06b7b12c3e4393bb7f1179f4846, type: 3}
-      sentence: hey
-    - speakerName: 
-      speakerImage: {fileID: 0}
-      sentence: 
+      sentence: My head hurts...Where...Where am I?
+    - speakerName: Marcus
+      speakerImage: {fileID: 21300000, guid: 0facd06b7b12c3e4393bb7f1179f4846, type: 3}
+      sentence: "Oh, there is somebody. I\u2019ll ask him how, what, and where I
+        am!"
 --- !u!1 &794695970
 GameObject:
   m_ObjectHideFlags: 0
@@ -7205,8 +7218,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7271,8 +7284,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: -298.29}
-  m_SizeDelta: {x: 1339.401, y: 800}
+  m_AnchoredPosition: {x: -254.1, y: -86}
+  m_SizeDelta: {x: 1768.9, y: 460.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &910252051
 GameObject:
@@ -7497,8 +7510,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -948.37, y: 220}
-  m_SizeDelta: {x: 522.652, y: 300}
+  m_AnchoredPosition: {x: -522.9, y: 185}
+  m_SizeDelta: {x: 1134.9, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252453101
 MonoBehaviour:
@@ -7547,8 +7560,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7631,8 +7644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -948.37, y: 220}
-  m_SizeDelta: {x: 522.652, y: 300}
+  m_AnchoredPosition: {x: -254.1, y: 204}
+  m_SizeDelta: {x: 1768.9, y: 241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1272739394
 CanvasRenderer:
@@ -7689,8 +7702,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
