@@ -1,8 +1,10 @@
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI dialogueText; 
 
     public Animator animator;
+    private int number = 0;
 
     private Queue<DialogueLine> dialogueLines;  
     private bool isDialogueActive = false;  // Flag to track if a dialogue is currently active
@@ -61,18 +64,23 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueLines.Count == 0)
         {
-            EndDialogue();  // End dialogue when there are no more lines
+            EndMonologue();  // End dialogue when there are no more lines
             return;
         }
 
         // Get the next line and set it to the monologue text
         DialogueLine line = dialogueLines.Dequeue();
-        DisplayNextSentence();
-        // monologueText.text = line.sentence;
+        nameText.text = line.speakerName;
 
-        // // Start typing the monologue text one letter at a time
-        // StopAllCoroutines();
-        // StartCoroutine(TypeMonologue(line.sentence));
+        // Set the speaker's image if it's provided
+        if (line.speakerImage != null)
+        {
+            speakerImageUI.sprite = line.speakerImage;
+        }
+
+        // Start typing the dialogue sentence letter by letter
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(line.sentence));
     }
 
     // Coroutine for typing out the monologue text letter by letter
@@ -91,7 +99,13 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueLines.Count == 0)
         {
-            EndDialogue();  // End dialogue when all lines are displayed
+            if (number == 0) {
+                EndMonologue();  // End dialogue when all lines are displayed
+            } else {
+                EndDialogue();
+            }
+
+            ++number;
             return;
         }
 
@@ -124,11 +138,29 @@ public class DialogueManager : MonoBehaviour
     // Ends the dialogue, hides the UI, and resets the dialogue state
     void EndDialogue()
     {
+
         animator.SetBool("IsOpen", false);
-        dialogueUI.SetActive(false);  // Hide the dialogue UI
-        monologueUI.SetActive(false);  // Hide the monologue UI
-        isDialogueActive = false;  // Reset dialogue state to allow new dialogues
-        
+        dialogueUI.SetActive(false);
+        isDialogueActive = false;
+
+        StartCoroutine(WaitAndLoadScene());
+
         // FindObjectOfType<Player>().SetMovement(true); // Enable player movement
+    }
+
+    void EndMonologue()
+    {
+        animator.SetBool("IsOpen", false);
+
+        monologueUI.SetActive(false);
+        isDialogueActive = false;
+
+    }
+
+    IEnumerator WaitAndLoadScene()
+    {
+        Debug.Log("Waiting for 1 second before loading the scene: " + 1);
+        yield return new WaitForSeconds(1f); // Wait for 1 second
+        SceneManager.LoadScene(1);
     }
 }
