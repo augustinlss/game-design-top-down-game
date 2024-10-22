@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 299caf9e1fdaf4cc19142db3fe9ee3a7
+guid: 44e7ffe04152a924ca3a8088a5e88181
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,102 +93,131 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_0
+      name: Armored Axeman-Idle_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 16
-        height: 16
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9206f38325b094f31aebb3af81f15248
-      internalID: 1162557674
+      spriteID: db5893b9c7f071b49b4301792510a947
+      internalID: 579282794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_1
+      name: Armored Axeman-Idle_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 3
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.49999988, y: 0.48}
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a944a1b32bc064b8ba9bea1c15e1a03f
-      internalID: -172919522
+      spriteID: 660b71e2cc9755d4ca65ab0b8006f749
+      internalID: -101015850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_2
+      name: Armored Axeman-Idle_2
       rect:
         serializedVersion: 2
-        x: 39
-        y: 3
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55a3912236ef942db855734588835fb5
-      internalID: -469860731
+      spriteID: d60ed31a2960d3b4c9e11388a8959c3e
+      internalID: -682971411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_3
+      name: Armored Axeman-Idle_3
       rect:
         serializedVersion: 2
-        x: 57
-        y: 3
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.42}
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b3ab39bc8cd946c698919cd52107775
-      internalID: 874698255
+      spriteID: 10e15dfc69e43604090893a2ff12408c
+      internalID: 710959484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armored Axeman-Idle_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7aa0f2617287742beee08918a08912
+      internalID: 293671670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armored Axeman-Idle_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fe8c847993b6040ba7aef868fd7a19
+      internalID: -733812628
       vertices: []
       indices: 
       edges: []
@@ -204,10 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character_0: 1162557674
-      character_1: -172919522
-      character_2: -469860731
-      character_3: 874698255
+      Armored Axeman-Idle_0: 579282794
+      Armored Axeman-Idle_1: -101015850
+      Armored Axeman-Idle_2: -682971411
+      Armored Axeman-Idle_3: 710959484
+      Armored Axeman-Idle_4: 293671670
+      Armored Axeman-Idle_5: -733812628
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
